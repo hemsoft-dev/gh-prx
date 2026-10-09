@@ -18,8 +18,9 @@ var buildDate = ""
 
 // Change these two constants to move the extension to a different org.
 const (
-	repoOwner = "HemSoft"
-	repoName  = "gh-prx"
+	repoOwner  = "hemsoft-dev"
+	repoAuthor = "HemSoft"
+	repoName   = "gh-prx"
 )
 
 var errHelpDisplayed = errors.New("help displayed")
@@ -75,7 +76,7 @@ func run(args []string, stdout io.Writer, stderr io.Writer) error {
 }
 
 func printBanner(w io.Writer) {
-	fmt.Fprintf(w, "%s %s by %s\n", repoName, formatVersion(version, buildDate), repoOwner)
+	fmt.Fprintf(w, "%s %s by %s\n", repoName, formatVersion(version, buildDate), repoAuthor)
 }
 
 func asyncUpdateCheck() <-chan string {
@@ -203,7 +204,7 @@ func runVersionTestable(w io.Writer, ver string) error {
 	installCmd := "gh extension install " + repoOwner + "/" + repoName
 	upgradeCmd := "gh extension upgrade " + repoName
 
-	fmt.Fprintf(w, "%s %s by %s · %s\n", repoName, formatVersion(ver, buildDate), repoOwner, installCmd)
+	fmt.Fprintf(w, "%s %s by %s · %s\n", repoName, formatVersion(ver, buildDate), repoAuthor, installCmd)
 
 	latest, err := fetchLatestReleaseFunc(repoOwner, repoName)
 	if err != nil || latest == "" {

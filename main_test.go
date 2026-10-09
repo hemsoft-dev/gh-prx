@@ -11,7 +11,7 @@ import (
 
 func TestBuildListArgsIncludesFilters(t *testing.T) {
 	options := listOptions{
-		repo:      "HemSoft/gh-prx",
+		repo:      "hemsoft-dev/gh-prx",
 		limit:     50,
 		state:     "all",
 		author:    "@me",
@@ -28,7 +28,7 @@ func TestBuildListArgsIncludesFilters(t *testing.T) {
 	want := []string{
 		"pr", "list",
 		"--json", jsonFields,
-		"--repo", "HemSoft/gh-prx",
+		"--repo", "hemsoft-dev/gh-prx",
 		"--limit", "50",
 		"--state", "all",
 		"--author", "@me",
@@ -58,7 +58,7 @@ func TestBuildDisplayPullRequestNormalizesFields(t *testing.T) {
 		UpdatedAt:      now.Add(-2 * time.Hour),
 		HeadRefName:    "feature/prx",
 		BaseRefName:    "main",
-		URL:            "https://github.com/HemSoft/gh-prx/pull/42",
+		URL:            "https://github.com/hemsoft-dev/gh-prx/pull/42",
 		Author:         &author{Login: "HemSoft", Name: "Jane Doe"},
 		StatusCheckRollup: []checkItem{
 			{Typename: "CheckRun", Status: "COMPLETED", Conclusion: "SUCCESS"},
@@ -494,7 +494,7 @@ func TestRunVersionUpToDate(t *testing.T) {
 	if !strings.Contains(out, "gh-prx v1.2.3 by HemSoft") {
 		t.Fatalf("expected version line, got %q", out)
 	}
-	if !strings.Contains(out, "gh extension install HemSoft/gh-prx") {
+	if !strings.Contains(out, "gh extension install hemsoft-dev/gh-prx") {
 		t.Fatalf("expected install command, got %q", out)
 	}
 	if !strings.Contains(out, "✓ Up to date") {
