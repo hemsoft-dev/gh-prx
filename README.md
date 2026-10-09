@@ -14,7 +14,7 @@ A GitHub CLI extension that supercharges `gh pr list` with a richer, color-coded
 Requires [GitHub CLI](https://cli.github.com/) (`gh`) authenticated with your account.
 
 ```bash
-gh extension install HemSoft/gh-prx
+gh extension install hemsoft-dev/gh-prx
 ```
 
 That's it. Prebuilt binaries are available for all platforms — no Go toolchain needed.
@@ -129,7 +129,7 @@ By default, shows open PRs you authored across the org. Use `--review-required` 
 
 ```bash
 gh prx atm                              # my PRs across current org
-gh prx atm --org HemSoft                # my PRs in a specific org
+gh prx atm --org hemsoft-dev                # my PRs in a specific org
 gh prx atm --review-required            # PRs awaiting my review
 gh prx atm --org AcmeCorp -r --limit 10   # review requests, capped
 gh prx atm --json                       # machine-readable output
@@ -154,14 +154,14 @@ gh prx version
 ```
 
 ```
-gh-prx v0.1.2 by HemSoft · gh extension install HemSoft/gh-prx
+gh-prx v0.1.2 by HemSoft · gh extension install hemsoft-dev/gh-prx
 ✓ Up to date
 ```
 
 If a newer release exists:
 
 ```
-gh-prx v0.1.0 by HemSoft · gh extension install HemSoft/gh-prx
+gh-prx v0.1.0 by HemSoft · gh extension install hemsoft-dev/gh-prx
 ↑ v0.1.2 available · gh extension upgrade gh-prx
 ```
 
