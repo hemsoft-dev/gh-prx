@@ -250,7 +250,7 @@ Examples:
   gh prx me
   gh prx me --org AcmeCorp
   gh prx atm
-  gh prx atm --org HemSoft
+  gh prx atm --org hemsoft-dev
   gh prx atm --review-required
   gh prx changelog
   gh prx changelog --version 0.3.0
